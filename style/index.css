@@ -76,28 +76,27 @@ p {
     padding-top: 0px;
 }
 
-header {
+header .navbar {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    flex-wrap: nowrap;
 }
 
-header .navbar .headernav {
-    margin-top: 20px;
-}
-
-header nav .headernav {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 20%;
-    padding: 10px 2%;
+li {
+    display: inline-flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
  a {
+    display: inline-flex;
+    padding: 22px;
+    margin: 2px; 
+    flex-wrap: nowrap;
     text-decoration: none;
     font-size: 0.5rem;
     color: black;
+    justify-content: space-around;
 }
 
 div .bigimg {
@@ -223,20 +222,22 @@ footer nav a {
     text-decoration: none;
 }
 
-@media(max-width: 500px){
-    header {
+@media screen and (max-width: 500px) {
+    .navbar {
         flex-direction: column;
-        align-items: center;
     }
 
-    nav .headernav {
-        flex-direction: column;
-        align-items: center;
+    .logo {
+        max-width: 50%;
+        max-height: 50%;
+        margin: 0 auto;
     }
 
-    .topcontent {
+    ul {
+        display: flex; 
         flex-direction: column;
-        justify-content: space-between;
+        margin: 0 auto;
+        justify-content: flex-start;
         align-items: center;
     }
 
@@ -244,17 +245,32 @@ footer nav a {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        margin: 0 auto;
     }
 
-    .bottom-content {
+    .top-content {
+        display: flex;
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
     }
 
-    footer nav{
+    .bottom-content {
+        display: flex;
         flex-direction: column;
-        align-items: center; 
-        
+        align-items: center;
     }
-}
+
+    .bottom-content .text-container {
+        margin-bottom: 10%;
+    }
+
+    footer nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer nav a {
+        align-items: center;
+    }
+
+}   
