@@ -274,3 +274,8 @@ footer nav a {
     }
 
 }   
+
+div .contact {
+    background-color: white;
+    max-width: 900px;
+}
