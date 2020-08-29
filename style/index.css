@@ -19,7 +19,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -54,10 +54,11 @@ table {
 html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
+    background-color: black;
 }
 
 h1, h2, h3, h4, h5 {
-    font-size: 18px;
+    font-size: 1rem;
     margin-bottom: 15px;
     font-family: 'Rubik', sans-serif;
 }
@@ -67,8 +68,42 @@ p {
 }
 
 .container {
-    width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    width: 100%;
+    background-color: white;
+    padding: 10%;
+    padding-top: 0px;
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+li {
+    display: inline-flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+ a {
+    display: inline-flex;
+    padding: 22px;
+    margin: 2px; 
+    flex-wrap: nowrap;
+    text-decoration: none;
+    font-size: 0.5rem;
+    color: black;
+    justify-content: space-around;
+}
+
+div .bigimg {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   margin: 5%;
 }
 
 .top-content {
@@ -82,7 +117,8 @@ p {
 .top-content .text-container {
     width: 48%;
     padding: 0 1%;
-    padding-bottom: 20px;  
+    padding-bottom: 20px;
+    font-size: 0.5rem;  
 }
 
 .middle-content {
@@ -101,7 +137,7 @@ p {
     justify-content: space-evenly;
 }
 
-.middle-content .boxes .box {
+.middle-content .boxes .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10 {
     width: 12.5%;
     height: 100px;
     background: black;
@@ -112,6 +148,46 @@ p {
     justify-content: center;
 }
 
+.middle-content .boxes .box1 {
+    background-color: teal;
+}
+
+.middle-content .boxes .box2 {
+    background-color: gold;
+}
+
+.middle-content .boxes .box3 {
+    background-color: cadetblue;
+}
+
+.middle-content .boxes .box4 {
+    background-color: coral;
+}
+
+.middle-content .boxes .box5 {
+    background-color: crimson;
+}
+
+.middle-content .boxes .box6 {
+    background-color: forestgreen;
+}
+
+.middle-content .boxes .box7 {
+    background-color: darkorchid;
+}
+
+.middle-content .boxes .box8 {
+    background-color: hotpink;
+}
+
+.middle-content .boxes .box9 {
+    background-color: indigo;
+}
+
+.middle-content .boxes .box10 {
+    background-color: dodgerblue;
+}
+
 .bottom-content {
     display: flex;
     margin: 0 2% 20px;
@@ -120,6 +196,7 @@ p {
 
 .bottom-content .text-container {
     padding-right: 4%;
+    font-size: 0.5rem;
 }
 
 .bottom-content .text-container:last-child {
@@ -137,10 +214,68 @@ footer nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 2%;
-    font-size: 14px;
+    font-size: 0.5rem;
 }
 
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+@media screen and (max-width: 500px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .logo {
+        max-width: 50%;
+        max-height: 50%;
+        margin: 0 auto;
+    }
+
+    ul {
+        display: flex; 
+        flex-direction: column;
+        margin: 0 auto;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .boxes {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .top-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottom-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottom-content .text-container {
+        margin-bottom: 10%;
+    }
+
+    footer nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer nav a {
+        align-items: center;
+    }
+
+}   
+
+div .contact {
+    background-color: white;
+    max-width: 900px;
 }
